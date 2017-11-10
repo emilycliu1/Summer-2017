@@ -1,0 +1,14 @@
+body{
+	background: #FFDD9D;
+}
+
+table{
+	width:400px; 
+	text-align:center;
+	border: solid black 1px;
+}
+
+th{
+	cursor: pointer;
+	padding-bottom: 8px;
+}

@@ -1,0 +1,27 @@
+doctype html
+html
+	head
+		title Users
+		script(src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+		script(src= "users.js" type="text/javascript")
+		link(href="users.css" rel = "stylesheet" type = "text/css")
+		link(rel="title icon" type="image/png" href="https://www.hey.fr/tools/emoji/ios_emoji_smiling_face_with_open_mouth_and_smiling_eyes.png")
+
+	body
+		h3 Here are the users that matched your search!
+		p (Click table headers to re-order)
+		table
+			tr
+				th(id="byID") ID
+				th(id="byName") Name
+				th(id="byAge") Age
+				th(id="byLocation") Location
+			// For each row (called user) in rows (the array)
+			for user in results 
+				tr
+					td #{user.id}
+					td #{user.name}
+					td(id="age") #{user.age}
+					td #{user.location}
+		p
+		button(id="returnHome" type="button") Return to Home
